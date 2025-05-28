@@ -3,6 +3,7 @@ Project Title: Retail Sales Analysis
 Database:sql_project_p2
 
 This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, Performing Exploratory Data analysis (EDA), and answering specific business questions through SQL queries.To complement the SQL analysis, an interactive Tableau dashboard was created to visualize key insights from the retail sales data.
+
 This unguided project demonstrates my ability to clean, manipulate, and analyze data using SQL, and to present key business insights through interactive dashboards in Tableau. It simulates the kind of data analysis a retail business would use to understand performance, optimize sales, and improve customer targeting.
 
 Objectives
