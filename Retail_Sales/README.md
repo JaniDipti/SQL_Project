@@ -2,7 +2,7 @@ Project Title: Retail Sales Analysis
 
 Database:sql_project_p2
 
-This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries.
+This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, Performing Exploratory Data analysis (EDA), and answering specific business questions through SQL queries.To complement the SQL analysis, an interactive Tableau dashboard was created to visualize key insights from the retail sales data.
 
 Objectives
 
@@ -104,14 +104,13 @@ SELECT DISTINCT category FROM retail_sales_data;
 
 -- Data Analysis & Business Key Problems & Answers
 
- -- Q.1 Write a SQL query to retrieve all columns for sales made on '2022-11-05
+ To retrieve all columns for sales made on '2022-11-05
 
 SELECT *
 FROM retail_sales_data
 WHERE sale_date = '2022-11-05';
 
-
--- Q.2 Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022
+To retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022
 
 SELECT * 
 FROM retail_sales_data
@@ -120,8 +119,7 @@ WHERE category = 'Clothing'
   AND quantity >= 4 
 LIMIT 0, 1000;
 
-
--- Q.3 Write a SQL query to calculate the total sales (total_sale) for each category.
+To calculate the total sales (total_sale) for each category.
 
 SELECT 
     category,
@@ -130,7 +128,7 @@ SELECT
 FROM retail_sales_data
 GROUP BY 1
 
--- Q.4 Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.
+The average age of customers who purchased items from the 'Beauty' category.
 
 SELECT
     ROUND(AVG(age), 2) as avg_age
@@ -138,13 +136,13 @@ FROM retail_sales_data
 WHERE category = 'Beauty';
 
 
--- Q.5 Write a SQL query to find all transactions where the total_sale is greater than 1000.
+To find all transactions where the total_sale is greater than 1000.
 
 SELECT * FROM retail_sales_data
 WHERE total_sale > 1000
 
 
--- Q.6 Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.
+The total number of transactions (transaction_id) made by each gender in each category.
 
 SELECT 
     category,
@@ -157,8 +155,7 @@ GROUP
     gender
 ORDER BY 1
 
-
--- Q.7 Write a SQL query to calculate the average sale for each month. Find out best selling month in each year
+To calculate the average sale for each month. Find out best selling month in each year
 
 SELECT 
        year,
@@ -178,7 +175,7 @@ WHERE rank = 1
     
 -- ORDER BY 1, 3 DESC
 
--- Q.8 Write a SQL query to find the top 5 customers based on the highest total sales 
+To find the top 5 customers based on the highest total sales 
 
 SELECT 
     customer_id,
@@ -188,7 +185,7 @@ GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 5
 
--- Q.9 Write a SQL query to find the number of unique customers who purchased items from each category.
+To find the number of unique customers who purchased items from each category.
 
 
 SELECT 
@@ -199,7 +196,7 @@ GROUP BY category
 
 
 
--- Q.10 Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17)
+create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17)
 
 WITH hourly_sale
 AS
@@ -265,6 +262,13 @@ Customer Demographics: The dataset includes customers from various age groups, w
 High-Value Transactions: Several transactions had a total sale amount greater than 1000, indicating premium purchases.
 Sales Trends: Monthly analysis shows variations in sales, helping identify peak seasons.
 Customer Insights: The analysis identifies the top-spending customers and the most popular product categories.
+
+For visulaze the more clear insight of sales analysis same dataset used in Tableau Dashboard.
+🔗 **[View the Dashboard on Tableau Public](https://public.tableau.com/views/Book1_17484418371370/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+Sales Overview in Dashboard : Monthly Sales Trend, Catogory Price Per Unit,Sales by Category.
+
+The dashboard was created using the `.twbx` file available in this repository:
 
 Reports
 
